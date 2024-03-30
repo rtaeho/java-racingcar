@@ -6,7 +6,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class InputView {
@@ -15,18 +14,12 @@ public class InputView {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    public static List<Car> getCarNames() throws IOException {
+    public String getCarNames() throws IOException {
         System.out.println(REQUEST_CAR_NAME);
-        String name = br.readLine();
-        String[] carNamesArray = name.split(",");
-        List<Car> cars = new ArrayList<>();
-        for (String carName : carNamesArray) {
-            cars.add(new Car(carName));
-        }
-        return cars;
+        return br.readLine();
     }
 
-    public static int getTryCount() throws IOException {
+    public int getTryCount() throws IOException {
         System.out.println(REQUEST_ATTEMPT_NUMBER);
         return Integer.parseInt(br.readLine());
     }

@@ -5,7 +5,7 @@ import java.util.List;
 import domain.Car;
 
 public class ResultView {
-    public static void printStatus(List<Car> carsList) {
+    public void printStatus(List<Car> carsList) {
         for (Car car : carsList) {
             int currentPosition = car.getPosition();
             String carName = car.getCarName();
@@ -15,14 +15,14 @@ public class ResultView {
         System.out.println();
     }
 
-    private static void printPosition(int currenPosition) {
+    private void printPosition(int currenPosition) {
         for (int i = 0; i < currenPosition; i++) {
             System.out.print("-");
         }
         System.out.println();
     }
 
-    public static void printWinners(List<String> winners) {
+    public void printWinners(List<String> winners) {
         String result = String.join(", ", winners);
         System.out.println(result + "가 최종 우승했습니다.");
     }
