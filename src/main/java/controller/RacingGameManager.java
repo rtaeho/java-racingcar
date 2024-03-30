@@ -4,6 +4,8 @@ import domain.Cars;
 import view.InputView;
 import view.ResultView;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class RacingGameManager {
@@ -25,7 +27,5 @@ public class RacingGameManager {
             cars.moveAllCars();
             resultView.printStatus(cars.getCars());
         }
-
     }
-
 }

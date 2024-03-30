@@ -14,7 +14,7 @@ public class Cars {
         String[] carNamesArray = carNames.split(",");
         List<Car> cars = new ArrayList<>();
         for (String carName : carNamesArray) {
-            cars.add(new Car(carName));
+            cars.add(new Car(carName.trim()));
         }
         return cars;
     }
@@ -28,6 +28,7 @@ public class Cars {
     private int generateRandomNumber() {
         return (int) (Math.random() * 10);
     }
+
     public int findMaxPosition() {
         int maxPosition = 0;
         for (Car car : cars) {

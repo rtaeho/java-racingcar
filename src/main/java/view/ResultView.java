@@ -1,10 +1,12 @@
 package view;
 
-import java.util.List;
-
 import domain.Car;
 
+import java.util.List;
+
 public class ResultView {
+    public static final String PRINT_FINAL_WINNER = "가 최종 우승했습니다.";
+
     public void printStatus(List<Car> carsList) {
         for (Car car : carsList) {
             int currentPosition = car.getPosition();
@@ -24,7 +26,7 @@ public class ResultView {
 
     public void printWinners(List<String> winners) {
         String result = String.join(", ", winners);
-        System.out.println(result + "가 최종 우승했습니다.");
+        System.out.println(result + PRINT_FINAL_WINNER);
     }
 
 }
